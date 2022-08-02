@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button1">CLick to see the Green box</button>
+    <button class="button2">Toggle Light/Dark</button>
+
+    <div class="mydiv" style="display: none"></div>
+
+
+    
+    <script>
+      let button = document.querySelector(".button1");
+      let div = document.querySelector(".mydiv");
+
+      let button2 = document.querySelector(".button2");
+
+      button2.addEventListener("click", function () {
+        if (div.style.backgroundColor == "green"){
+           div.style.backgroundColor = "lightgreen"
+        }else{
+           div.style.backgroundColor = "green"
+        }
+      });
+
+      button2.style.backgroundColor = "green";
+      button2.style.color = "white";
+      button2.style.height = "50px";
+      button2.style.width = "100vw";
+      button.style.backgroundColor = "green";
+      button.style.color = "white";
+      button.style.height = "50px";
+      button.style.width = "100vw";
+
+      div.style.backgroundColor = "green";
+      div.style.color = "white";
+      div.style.border = "1px solid black";
+      div.style.height = "100vh";
+
+      button.addEventListener("click", function () {
+        if (div.style.display == "none") {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
